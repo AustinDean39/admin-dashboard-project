@@ -1,21 +1,30 @@
 .page-container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1.065fr 4fr;
+  grid-template-rows: 1.06fr 5fr;
   height: 100vh;
-  grid-template-areas: 
+  grid-template-areas:
     "sidebar header"
     "sidebar main";
 }
 
 .header {
   grid-area: header;
+  z-index: 2;
+
+  box-shadow: 0.1rem 0 0.5rem #999;
 }
 
 .sidebar {
   grid-area: sidebar;
+  z-index: 3;
+
+  background-color: #818cf8;
 }
 
 .main {
   grid-area: main;
+  z-index: 1;
+
+  background-color: #eef2ff;
 }
