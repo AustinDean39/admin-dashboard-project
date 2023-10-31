@@ -1,10 +1,8 @@
-/* Setting the global font family */
-body {
-  font-family: 'Quicksand', sans-serif;
-}
-
-/* Main page layout */
+/* Whole page section */
 .page-container {
+  /* sets the global font family */
+  font-family: 'Quicksand', sans-serif;
+  /* Main page layout */
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
@@ -38,10 +36,8 @@ body {
   color: white;
   padding: 1rem;
 }
-
 /* Sidebar logo */
-
-.logo-container {
+.sidebar__logo {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 1rem;
@@ -49,13 +45,13 @@ body {
   justify-items: start;
 }
 
-.logo-img {
+.logo__img {
   grid-area: 1 / 1 / 2 / 2;
   margin: auto;
   max-height: 6ex;
 }
 
-.logo-text {
+.logo__text {
   /* grid item settings */
   grid-area: 1 / 2 / 2 / 3;
   /* font settings */
@@ -67,7 +63,7 @@ body {
 }
 
 /* Sidebar nav links */
-.primary-links {
+.sidebar__nav {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-auto-rows: min-content;
@@ -75,28 +71,21 @@ body {
   align-items: center;
 }
 
-.icon {
+.sidebar__nav--secondary {
+  /* align secondary links to bottom */
+  align-self: end;
+}
+
+.nav__icon {
   margin: auto;
   max-height: 2rem;
 }
 
-.sidebar-link {
+.nav__link {
   color: white;
   font-weight: 700;
   text-decoration: none;
   text-shadow: 0.1em 0.1em 0.2em #000;
-}
-
-.secondary-links {
-  /* grid item settings */
-  align-self: end;
-
-  /* grid container settings */
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-auto-rows: min-content;
-  gap: 1rem;
-  align-items: center;
 }
 
 /* Main content section */
