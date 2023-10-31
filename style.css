@@ -6,8 +6,8 @@ body {
 /* Main page layout */
 .page-container {
   display: grid;
-  grid-template-columns: 1.065fr 4fr;
-  grid-template-rows: 1.06fr 5fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
   height: 100vh;
   grid-template-areas:
     'sidebar header'
@@ -24,62 +24,77 @@ body {
 
 /* Sidebar section */
 .sidebar {
+  /* grid item properties */
   grid-area: sidebar;
   z-index: 3;
 
-  background-color: #6366f1;
-  color: white;
-
+  /* grid container properties */
   display: grid;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: min-content repeat(2, minmax(min-content, 1fr));
   gap: 3rem;
+
+  /* basic/element properties */
+  background-color: #312e81;
+  color: white;
+  padding: 1rem;
 }
 
 /* Sidebar logo */
 
 .logo-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   gap: 1rem;
-  margin-top: 1rem;
+  align-items: center;
+  justify-items: start;
 }
 
 .logo-img {
   grid-area: 1 / 1 / 2 / 2;
+  margin: auto;
+  max-height: 6ex;
 }
 
 .logo-text {
+  /* grid item settings */
   grid-area: 1 / 2 / 2 / 3;
-
-  font-size: 1.5rem;
+  /* font settings */
+  font-size: 3em;
   font-weight: 700;
+  text-shadow: 0.1em 0.1em 0.2em #000;
+
+  margin: 0;
 }
 
 /* Sidebar nav links */
 .primary-links {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: min-content;
   gap: 1rem;
   align-items: center;
 }
 
 .icon {
-  max-height: min-content;
-  margin-left: auto;
+  margin: auto;
+  max-height: 2rem;
 }
 
 .sidebar-link {
   color: white;
   font-weight: 700;
-  margin-right: auto;
   text-decoration: none;
+  text-shadow: 0.1em 0.1em 0.2em #000;
 }
 
 .secondary-links {
+  /* grid item settings */
+  align-self: end;
+
+  /* grid container settings */
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: min-content;
   gap: 1rem;
   align-items: center;
 }
