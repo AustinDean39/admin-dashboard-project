@@ -5,7 +5,7 @@
   /* Main page layout */
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 4fr 19fr;
   height: 100vh;
   grid-template-areas:
     'sidebar header'
@@ -14,10 +14,111 @@
 
 /* Header section */
 .header {
+  /* Grid item properties */
   grid-area: header;
   z-index: 2;
-
+  /* Grid container properties */
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  /* align-content: space-between; */
+  /* Header drop-shadow on main */
   box-shadow: 0.1rem 0 0.5rem #999;
+  /* other properties */
+  padding: 1rem 4rem 1rem 2rem;
+  /* top, right, boottom, left */
+}
+
+/* Header upper section */
+.header__upper {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, min-content);
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Header search bar & icon */
+.header__search {
+  /* border: 1px solid; */
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-content: center;
+  gap: 1rem;
+}
+
+.search__input {
+  background-color: #e0e7ff;
+  border-radius: 1rem;
+  border-style: none;
+  padding: 0.25rem 0.5rem;
+  width: clamp(27ch, 85%, 75ch);
+}
+
+/* Header upper section user profile */
+.header__user-profile--corner {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+/* Upper-corner user profile image */
+.header__user-image--small {
+  max-height: min(3rem, 100px);
+  /* don't grow larger than original size */
+}
+
+.header__username--small {
+  font-weight: 900;
+  margin-right: auto;
+}
+
+/* Header lower section */
+.header__lower {
+  display: grid;
+  grid-template-columns: 9fr repeat(3, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.header__user-display {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1rem;
+}
+
+.header__user-profile {
+  display: grid;
+  grid-auto-rows: repeat(2, min-content);
+}
+
+/* Header user profile image */
+.header__user-image {
+  max-height: min(4rem, 150px);
+  /* don't grow larger than original size */
+}
+
+.header__user-greeting {
+  font-size: 0.75rem;
+}
+
+.header__username {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.header__btn {
+  /* appearance */
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.6rem 1.8rem;
+  /* positioning */
+  margin-right: -1.5rem;
+  margin-top: 1rem;
 }
 
 /* Sidebar section */
@@ -32,10 +133,11 @@
   gap: 3rem;
 
   /* basic/element properties */
-  background-color: #312e81;
+  background-color: #3730a3;
   color: white;
   padding: 1rem;
 }
+
 /* Sidebar logo */
 .sidebar__logo {
   display: grid;

@@ -21,32 +21,31 @@
     <div class="header">
       <div class="header__upper">
         <div class="header__search">
-          <div class="header__search-box">
-            <img src="./assets/svg-icons/magnify.svg" alt="search" class="search__icon" height="25px">
-            <input type="search" name="search__input" id="search__input" class="search__input">
-          </div>
+          <img src="./assets/svg-icons/magnify.svg" alt="search" class="search__icon" height="25px">
+          <input type="search" name="search__input" id="search__input" class="search__input">
         </div>
         <div class="header__notifications-icon">
           <img src="./assets/svg-icons/bell-ring.svg" alt="notifications" height="25px">
         </div>
         <div class="header__user-profile--corner">
-          <div class="header__user-image--small">
-            <img src="./assets/user-images/user-profile-img.png" alt="User Profile Image">
-          </div>
+          <img src="./assets/user-images/user-profile-img.png" alt="User Profile Image"
+            class="header__user-image--small">
           <div class="header__username--small">
             Braf Zacklin
           </div>
         </div>
       </div>
       <div class="header__lower">
-        <div class="header__user-profile">
-          <div class="header__user-image">
-            <img src="./assets/user-images/user-profile-img.png" alt="User Profile Image">
+        <div class="header__user-display">
+          <img src="./assets/user-images/user-profile-img.png" alt="User Profile Image" class="header__user-image">
+          <div class="header__user-profile">
+            <div class="header__user-greeting">Hi there,</div>
+            <div class="header__username">Braf Zacklin (@theLegman)</div>
           </div>
-          <div class="header__user-greeting">Hi there,</div>
-          <div class="header_username">Braf Zacklin (@theLegman)</div>
         </div>
-        <button class="header-btn">New</button><button class="header-btn">Upload</button><button class="header-btn">Share</button>
+        <button class="btn header__btn" id="btn-new">New</button>
+        <button class="btn header__btn" id="btn-upload">Upload</button>
+        <button class="btn header__btn" id="btn-share">Share</button>
       </div>
     </div>
 
@@ -72,7 +71,8 @@
         <img src="./assets/svg-icons/history_FILL1_wght400_GRAD0_opsz24.svg" alt="History" class="nav__icon">
         <a href="#" class="nav__link">History</a>
         <!-- Tasks link -->
-        <img src="./assets/svg-icons/tv_options_edit_channels_FILL1_wght400_GRAD0_opsz24.svg" alt="Tasks" class="nav__icon">
+        <img src="./assets/svg-icons/tv_options_edit_channels_FILL1_wght400_GRAD0_opsz24.svg" alt="Tasks"
+          class="nav__icon">
         <a href="#" class="nav__link">Tasks</a>
         <!-- Community link -->
         <img src="./assets/svg-icons/groups_2_FILL1_wght400_GRAD0_opsz24.svg" alt="Community" class="nav__icon">
