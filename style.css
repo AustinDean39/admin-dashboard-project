@@ -4,10 +4,9 @@
   font-family: 'Quicksand', sans-serif;
   /* Main page layout */
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 4fr 19fr;
-  height: 100svh;
-  /* overflow-y: auto; */
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
   grid-template-areas:
     'sidebar header'
     'sidebar main';
@@ -23,7 +22,7 @@
   grid-template-rows: min-content 1fr;
   /* align-content: space-between; */
   /* Header drop-shadow on main */
-  box-shadow: 0.1rem 0 0.5rem #999;
+  box-shadow: 0 0.1rem 0.75rem #999;
   /* other properties */
   padding: 1rem 4rem 1rem 2rem;
   /* top, right, bottom, left */
@@ -130,7 +129,7 @@
 
   /* grid container properties */
   display: grid;
-  grid-template-rows: min-content min-content 1fr;
+  grid-template-rows: auto auto 1fr;
   gap: 3rem;
 
   /* basic/element properties */
@@ -142,7 +141,7 @@
 /* Sidebar logo */
 .sidebar__logo {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr;
   gap: 1rem;
   align-items: center;
   justify-items: start;
@@ -220,6 +219,8 @@
 .main__project-board-section {
   /* grid item properties */
   grid-area: project-board;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 /* Actual project board */
@@ -296,7 +297,7 @@
 .main__announcements-section {
   grid-area: announcements;
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: auto 1fr;
   align-items: start;
 }
 
@@ -320,6 +321,8 @@
 /* Team section */
 .main__team-section {
   grid-area: team;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .main__team-card {
